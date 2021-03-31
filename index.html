@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Anime Base</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/hero.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/characters.css">
+</head>
+
+<body style="background-color: #000">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	  <div class="container-fluid">
+	    <a class="navbar-brand" href="#">Rick and Morthy Chars</a>
+	  </div>
+	</nav>
+
+	<section class="pt-5 pb-5 text-center hero">
+		<div class="container">
+			<img class="hero__logo" src="./assets/img/logo.png" alt="Rick and Morthy logo">
+			<h2 class="pt-3 pb-5">Все герои мультивселенной на одном сайте</h2>
+
+			<div class="row g-4">
+
+			  <div class="col-sm">
+			    <input type="text" class="form-control" placeholder="Имя" aria-label="name" id="searchName" >
+			  </div>
+
+			  <div class="col-sm">
+			    <select id="searchStatus" class="form-select" aria-label="CharacterStatus">
+				  <option value="" selected>Статус не важен</option>
+				  <option value="alive">Жив</option>
+				  <option value="dead">Мёртв</option>
+				  <option value="unknown">Неизвестно</option>
+				</select>
+			  </div>
+
+			  <div class="col-sm">
+			    <select id="searchGender" class="form-select" aria-label="CharacterGender">
+				  <option value="" selected>Пол не важен</option>
+				  <option value="male">Мужчина</option>
+				  <option value="female">Женщина</option>
+				  <option value="genderless">Бесполое</option>
+				  <option value="unknown">Неизвестно</option>
+				</select>
+			  </div>
+
+			  <div class="col-sm gap-1">
+			  	<button type="button" class="btn btn-success hero__search-btn" onclick="getAllCharsFromServer(true)">
+			  		Поиск
+			  	</button>
+			  </div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="pt-5 pb-5 characters">
+		<div class="container">
+			<h2 class="pb-4 text-white text-center">Персонажи</h2>
+			<div class="row mb-5" id="characterList"></div>
+			<div class="center"><button onclick="getAllCharsFromServer()" class="btn btn-success">Показать ещё</button></div>
+		</div>
+	</section>
+
+
+	<script type="text/javascript" src="./assets/scripts/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/lib/axios.min.js"></script>
+	<script type="text/javascript" src="./assets/scripts/app.js"></script>
+</body>
+</html>

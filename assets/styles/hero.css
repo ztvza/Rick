@@ -1,0 +1,29 @@
+.hero {
+	background-color: #000;
+	color: #fff;
+}
+
+.hero__logo {
+	max-width: 450px;
+}
+
+.hero__search-btn {
+	width: 100%;
+	background-color: #97CE4C;
+	border-color: #97CE4C;
+}
+
+.hero__search-btn:hover {
+	background-color: #87b944;
+	border-color: #87b944;
+}
+
+.character img {
+	max-width: 100%;
+}
+
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
